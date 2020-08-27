@@ -1,0 +1,172 @@
+/* ***** Global setting ***** */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html{
+  font-size: 62.5px;
+} */
+body{
+  font-family: "poppins", sans-serif;
+}
+h1{
+  font-size: 3.6rem;
+}
+h2{
+  font-size: 2.6rem;
+}
+h3{
+font-size: 2rem;
+font-weight: normal;
+}
+h4,h5{
+  font-size: 1.5rem;
+}
+li, 
+button, 
+label, 
+input,
+ p{
+  font-size: 1.5rem;
+}
+a{
+  color: azure;
+  text-decoration: none;
+}
+
+/* ***** Nav Section ***** */
+.main-head{
+  background: #131c27;
+  color: aliceblue;
+}
+nav{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  padding: 1.3rem;
+  min-height: 15vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav ul{
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+#logo{
+  flex: 1 1 10rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+}
+
+/* ***** Main Hero Section ***** */
+.hero{
+  background-image:linear-gradient(rgba(0,0,0,0.5), transparent), url(./img/landing-page.jpg );
+  min-height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;}
+.hero h3{
+    padding: 3rem;
+  }
+  
+/* ***** Locations section ****** */
+#locations{
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), transparent),
+   url(./img/new-york-page.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   overflow: hidden;
+}  
+.locations-head{
+  width: 80%;
+  margin: auto;
+}
+
+.locations-head h2{
+  padding: 2rem 0;
+  text-decoration: underline;
+}
+.cloud{
+position: absolute;
+top: 0%;
+right: 0%;
+}
+.moving-cloud-1{
+  animation: cloudAnimation 3s alternate ease-in-out;
+  opacity: 70;
+  height: 90%;
+}
+.moving-cloud-2{
+  top: 5%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudAnimation2 alternate ease-in-out 2s infinite;
+}
+
+/* ***** Animations ***** */
+@keyframes cloudAnimation{
+  from{
+    transform: translate(10%, -10%);
+  }
+  to {
+     transform: translate(0%, 0%);
+  }
+}
+@keyframes cloudAnimation2{
+  from{
+    transform: translate(5%, -5%);
+  }
+  to {
+     transform: translate(0%, -10%);
+  }
+}
+
+/* ***** Button ***** */
+  button{
+    padding: 1rem 3rem;
+    background-color: #4c6e97;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+button:hover{
+  background-color: rgb(41, 107, 107);
+}
+  /* ***** Media Queries ***** */
+  @media screen and (max-width:940px){
+    html{
+      font-size: 45%;
+    }
+    nav{
+      text-align: center;
+    }
+    #logo{
+      padding: 1rem;
+    }
+    .cloud{
+      height: 40rem;
+    }
+  }
+  @media screen and (max-width:1198px){
+    .cloud{
+      height: 70%;
+    }
+  }
